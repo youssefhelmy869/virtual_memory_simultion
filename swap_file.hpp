@@ -16,6 +16,10 @@ struct Swap_file
     frame *frame_list[SWAP_FILE_SIZE] = {};
     unsigned char *memory;
     static const int swap_file_memory_size = physical_memory::frames_size * 4;
+    int process_id_in_file =0;
+    process * process_in_file = nullptr;
+
+    bool free = true;
     Swap_file()
     {
         memory = (unsigned char *)malloc(physical_memory::frames_size * 4);
@@ -56,6 +60,7 @@ struct Swap_file
         for (auto &fr : frame_list)
         {
             delete fr;
+
         }
     }
 };

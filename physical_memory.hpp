@@ -1,4 +1,6 @@
 // physical_memory.hpp
+// Defines the physical_memory class and frame structure for managing physical memory frames.
+
 #include <string>
 #include <cstdlib>
 #include <cstring>

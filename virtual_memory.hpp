@@ -6,6 +6,7 @@
 #include <vector>
 #include "helper_funcs.hpp"
 #include "physical_memory.hpp"
+#include <cctype>
 #pragma once
 
 struct page
